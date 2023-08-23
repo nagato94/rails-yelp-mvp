@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="mt-4"><%= @restaurant.name %></h1>
+
+  <div class="card mt-4 shadow p-3 mb-5 bg-white rounded">
+    <div class="card-body">
+      <h5 class="card-title">Detalhes do Restaurante</h5>
+      <p class="card-text"><strong>Endereço:</strong> <%= @restaurant.address %></p>
+      <p class="card-text"><strong>Categoria:</strong> <%= @restaurant.category %></p>
+    </div>
+  </div>
+
+  <h2 class="mt-4 shadow p-3 mb-5 bg-white rounded">Reviews</h2>
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">
+      <p class="mb-1">Conteúdo: <%= review.content %></p>
+      <p class="mb-0">Avaliação: <%= review.rating %></p>
+    </li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Adicionar uma nova review', new_restaurant_review_path(@restaurant), class: 'btn btn-success mt-3' %>
+  <%= link_to 'Voltar', restaurants_path, class: 'btn btn-secondary mt-3' %>
+</div>

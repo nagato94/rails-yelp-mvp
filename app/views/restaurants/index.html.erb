@@ -1,0 +1,15 @@
+<div class="container shadow p-3 mb-5 bg-white mt-5 rounded">
+  <h1 class="mt-5">Lista de Restaurantes</h1>
+
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item shadow bg-white rounded border-0">
+        <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none" %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to new_restaurant_path, class: "btn btn-success mt-3" do %>
+   <i class="fa-solid fa-plus"></i> Adicionar Restaurante
+  <% end %>
+</div>

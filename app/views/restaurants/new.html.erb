@@ -1,0 +1,14 @@
+<div class="container shadow p-3 mb-5 bg-white rounded mt-5">
+  <h1 class="text-center">New Restaurant</h1>
+
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category, collection: %w[chinese italian japanese french belgian] %>
+    <%= f.button :submit, class: "btn btn-primary", style: "display: none;" %>
+  <% end %>
+
+  <button type="submit" form="new_restaurant" class="btn btn-success">
+    <i class="fa-solid fa-plus"></i> Criar novo restaurante
+  </button>
+</div>
