@@ -4,6 +4,7 @@
   <%= simple_form_for @restaurant do |f| %>
     <strong> <%= f.input :name %></strong>
     <strong> <%= f.input :address %></strong>
+    <strong> <%= f.input :phone_number %></strong>
     <strong> <%= f.input :category, collection: %w[chinese italian japanese french belgian] %> </strong>
     <%= f.button :submit, class: "btn btn-primary", style: "display: none;" %>
   <% end %>

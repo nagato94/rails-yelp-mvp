@@ -3,7 +3,7 @@
 
   <ul class="list-group">
     <% @restaurants.each do |restaurant| %>
-      <li id="bg" class="list-group-item rounded m-1">
+      <li id="bg" class="list-group-item rounded m-1 p-3 border-top-0 border-bottom-0 border-right-0">
       <i class="fa-solid fa-utensils"></i>  <%= link_to restaurant.name , restaurant_path(restaurant), class: "text-decoration-none mx-1" %>
       </li>
     <% end %>
