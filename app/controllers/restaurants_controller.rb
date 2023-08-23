@@ -18,7 +18,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to @restaurant
     else
-      render "new"
+      render :new, status: :unprocessable_entity
     end
   end
 

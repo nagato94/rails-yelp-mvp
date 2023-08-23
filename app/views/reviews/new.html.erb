@@ -1,9 +1,10 @@
-<div class="container shadow p-3 mb-5 bg-white rounded mt-5">
-  <h1 class="text-center">Reviews#new</h1>
-  <%# tenho de colocar na ordem que aparece na url %>
-  <%= simple_form_for [@restaurant, @review] do |f| %>
-    <%= f.input :content %>
-    <%= f.input :rating %>
-    <%= f.submit "Salvar review", class: "btn btn-success" %>
-  <% end %>
-</div>
+
+  <div class="container shadow p-3 mb-5 bg-white rounded mt-5 w-50">
+    <h1 class="text-center">Novas reviews</h1>
+    <%# tenho de colocar na ordem que aparece na url %>
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+     <strong> <%= f.input :content %> </strong>
+    <strong>  <%= f.input :rating, collection: (0..5) %> </strong>
+      <%= f.submit "Salvar review", class: "btn btn-success" %>
+    <% end %>
+  </div>

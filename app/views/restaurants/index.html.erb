@@ -3,8 +3,8 @@
 
   <ul class="list-group">
     <% @restaurants.each do |restaurant| %>
-      <li class="list-group-item shadow bg-white rounded border-0">
-        <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none" %>
+      <li id="bg" class="list-group-item rounded m-1">
+      <i class="fa-solid fa-utensils"></i>  <%= link_to restaurant.name , restaurant_path(restaurant), class: "text-decoration-none mx-1" %>
       </li>
     <% end %>
   </ul>

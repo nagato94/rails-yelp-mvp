@@ -12,9 +12,9 @@
   <h2 class="mt-4 shadow p-3 mb-5 bg-white rounded">Reviews</h2>
   <ul class="list-group">
     <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item">
-      <p class="mb-1">Conteúdo: <%= review.content %></p>
-      <p class="mb-0">Avaliação: <%= review.rating %></p>
+    <li id="border" class="list-group-item m-1 border-top-0 border-bottom-0 -border-rigth-0">
+      <p class="mb-1"><strong>Conteúdo: </strong><%= review.content %></p>
+      <p class="mb-0"><strong>Nota:</strong> ⭐ <%= review.rating %></p>
     </li>
     <% end %>
   </ul>
